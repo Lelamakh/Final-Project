@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: 972px;
+  object-fit: cover;
+}
+.slides-section {
+  /* display: none; */
+  margin: 50px 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.content-wrapper {
+  position: absolute;
+  z-index: 2;
+}
+.slides-wrapper {
+  position: relative;
+  background-color: darkcyan;
+}
+.logo {
+  width: 100%;
+  max-width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.content-wrapper {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+.content-left {
+  flex: 1;
+  font-size: 40px;
+  /* background-color: white; */
+}
+.middle-content {
+  /* flex: 1; */
+  /* background-color: white; */
+  display: block;
+  margin-top: 400px;
+  font-size: 44px;
+}
+.name {
+  display: block;
+}
+.content-right {
+  /* background-color: white; */
+
+  flex: 1;
+  text-align: right;
+  font-size: 40px;
+}
+.bottom {
+  display: block;
+  margin-top: 780px;
+}
+/* .slides-wrapper h1 {
+  position: absolute;
+  top: 50%;s
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: darkcyan;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 70%;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  color: transparent;
+  transition: all 0.5s ease-in;
+  color: white;
+}
+.slide.active h1 {
+  display: block;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  padding: 20px;
+} */
+
+.slides-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  height: 972px;
+  position: relative;
+}
+.slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 100%;
+  transition: width 0.5s ease-in;
+  z-index: -1;
+}
+.slide.active {
+  width: 100%;
+  z-index: 0;
+}
+/* .slide h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: darkcyan;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 70%;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  color: transparent;
+  transition: all 0.5s ease-in;
+  color: white;
+}
+.slide.active h2 {
+  display: block;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  padding: 20px;
+} */
+
+.slide img {
+  width: 100%;
+
+  height: 100%;
+  object-fit: cover;
+}
