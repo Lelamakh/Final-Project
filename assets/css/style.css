@@ -6,7 +6,7 @@
 .container {
   width: 100%;
   max-width: 1920 px;
-  height: 972px;
+  height: 960px;
   margin: 0 auto;
   padding: 10px 10px 0px 10px;
 }
@@ -27,6 +27,7 @@ img {
   position: relative;
   background-color: darkcyan;
 }
+
 .logo {
   width: 100%;
   max-width: 30px;
@@ -48,7 +49,6 @@ img {
   margin-top: 48px;
   margin-left: 52px;
   width: 113px;
-  opacity: 1;
 }
 .roca {
   width: 113px;
@@ -57,7 +57,7 @@ img {
   letter-spacing: 1.2px;
   color: #1a1a1a;
   font-size: 40px;
-  font-weight: 900;
+  font-weight: bold;
 }
 /* .dot {
   display: block;
@@ -76,16 +76,16 @@ img {
 }
 .middle-content {
   flex: 1;
+  width: 443px;
   /* background-color: white; */
   display: block;
   margin-top: 384px;
-  margin-left: 1023px;
+  margin-left: 923px;
   font-size: 49.7px;
   /* height: 292px; */
   text-align: left;
   letter-spacing: 0.75px;
   color: #212121;
-  opacity: 1;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -94,8 +94,7 @@ img {
   display: block;
   /* top: 445px; */
   left: 1023px;
-  /* width: 600px; */
-  font-size: 65px;
+  font-size: 60px;
   /* height: 294px; */
   text-align: left;
   letter-spacing: 1.06px;
@@ -112,7 +111,6 @@ img {
   text-align: left;
   letter-spacing: 0px;
   color: #212121;
-  opacity: 1;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -122,8 +120,6 @@ img {
   margin-top: 25px;
   margin-right: 60px;
   left: 1631px;
-  width: 170px;
-  height: 221px;
   text-align: left;
   letter-spacing: 4.75px;
   color: #1c1c1c;
@@ -133,37 +129,68 @@ img {
   font-size: 20px;
 }
 .right-corner {
-  margin-top: 25px;
   font-size: 158px;
-  font-weight: 1000;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  z-index: 1;
+  top: 25px;
+  right: 112px;
+  text-align: left;
+  letter-spacing: 4.75px;
+  width: 170px;
+  height: 221px;
 }
+.about {
+  position: absolute;
+  z-index: 2;
+  top: 106px;
+  right: 64px;
+  font-size: 43px;
+  font-weight: bold;
+  width: 237px;
+  height: 60px;
+  text-align: left;
+  letter-spacing: 1.3px;
+  color: #373737;
+  opacity: 1;
+}
+.overlay {
+  position: relative;
+  height: 200px;
+}
+
 .bottom {
   display: block;
-  /* margin-top: 780px; */
+  margin-top: 628px;
+  margin-right: 117px;
 }
-/* .slides-wrapper h1 {
-  position: absolute;
-  top: 50%;s
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: darkcyan;
-  border-radius: 12px;
-  text-align: center;
-  max-width: 70%;
-  height: 0;
-  width: 0;
-  opacity: 0;
-  color: transparent;
-  transition: all 0.5s ease-in;
-  color: white;
+.red-colour {
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #e93656;
+  text-align: left;
+  letter-spacing: 0px;
 }
-.slide.active h1 {
-  display: block;
-  width: auto;
-  height: auto;
-  opacity: 1;
-  padding: 20px;
-} */
+.black-colour {
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #212121;
+  text-align: left;
+  letter-spacing: 0px;
+  margin-right: 83px;
+}
+.line {
+  width: 340px;
+  height: 6px;
+  background: #e93656;
+  margin-top: 20px;
+  margin-left: 200px;
+}
 
 .slides-container {
   display: grid;
@@ -186,33 +213,76 @@ img {
   width: 100%;
   z-index: 0;
 }
-/* .slide h2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: darkcyan;
-  border-radius: 12px;
-  text-align: center;
-  max-width: 70%;
-  height: 0;
-  width: 0;
-  opacity: 0;
-  color: transparent;
-  transition: all 0.5s ease-in;
-  color: white;
-}
-.slide.active h2 {
-  display: block;
-  width: auto;
-  height: auto;
-  opacity: 1;
-  padding: 20px;
-} */
 
 .slide img {
   width: 100%;
-
   height: 100%;
   object-fit: cover;
+}
+
+/* second-section */
+
+.wrapper {
+  display: flex;
+  margin-top: 135px;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.left-side {
+  text-align: right;
+}
+.left-side h1 {
+  text-align: center;
+  letter-spacing: 0px;
+  color: #222222;
+  font-size: 40px;
+  margin-top: 83px;
+}
+.developer {
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #daae19;
+  opacity: 1;
+}
+.left-side p {
+  width: 334px;
+  height: 149px;
+  text-align: right;
+  margin-left: 38px;
+  margin-top: 33px;
+  text-align: right;
+  letter-spacing: 0.45px;
+  color: #555555;
+  opacity: 1;
+}
+.left-side button {
+  background: #e93656 0% 0% no-repeat padding-box;
+  opacity: 1;
+  width: 152px;
+  height: 50px;
+  border-style: none;
+  color: white;
+}
+.second-section img {
+  display: flex;
+  width: 100%;
+  max-width: 430px;
+  height: 755px;
+  margin-left: 65px;
+  margin-right: 69px;
+}
+.right-side {
+  text-align: left;
+  margin: 59px;
+}
+.right-side span {
+  display: block;
+  padding: 30px;
+}
+.right-side div {
+  display: flex;
+  gap: 30px;
+  background-color: red;
 }
