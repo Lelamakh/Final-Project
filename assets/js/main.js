@@ -106,15 +106,15 @@ const slideFn = () => {
 
   // დავალება 2.1) სლაიდერის 5წმ-იანი ცვლილება!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-  // let slideInterval = setInterval(goToNextSlide, 5000);
+  let slideInterval = setInterval(goToNextSlide, 5000);
 
   // დავალება 2.2) მაუსის მიტანისას სლაიდერის გაჩერება!!!!!!!!!!!!!!!!!!!!!
 
-  // const slidesContainer = document.querySelector("#slides-container");
-  // slidesContainer.addEventListener("mouseenter", () => {
-  //   clearInterval(slideInterval);
-  //   console.log("slides paused");
-  // });
+  const slidesContainer = document.querySelector("#slides-container");
+  slidesContainer.addEventListener("mouseenter", () => {
+    clearInterval(slideInterval);
+    console.log("slides paused");
+  });
 
   // დავალება 2.3) მაუსის გამოტანისას სლაიდერის გაგრძელება
 
