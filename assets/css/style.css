@@ -365,3 +365,6 @@ article {
   height: 60px;
   margin-bottom: 16px;
 }
+.recommendations {
+  background-color: rgb(8, 8, 92);
+}
