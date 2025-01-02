@@ -90,25 +90,10 @@ const slideFn = () => {
     }
     showSlides();
   };
-  //   prevSlideBtn.addEventListener("click", goToPrevSlide);
-  //   nextSlideBtn.addEventListener("click", goToNextSlide);
-
-  // დავალება 1) - საათი
-  //   const realWatch = document.getElementById("watch");
-  //   const updateWatch = () => {
-  //     const now = new Date();
-  //     const hours = now.getHours().toString().padStart(2, "0");
-  //     const minutes = now.getMinutes().toString().padStart(2, "0");
-  //     const seconds = now.getSeconds().toString().padStart(2, "0");
-  //     realWatch.textContent = `${hours}:${minutes}:${seconds}`;
-  //   };
-  //   setInterval(updateWatch, 1000);
-
-  // დავალება 2.1) სლაიდერის 5წმ-იანი ცვლილება!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   let slideInterval = setInterval(goToNextSlide, 5000);
 
-  // დავალება 2.2) მაუსის მიტანისას სლაიდერის გაჩერება!!!!!!!!!!!!!!!!!!!!!
+  //  მაუსის მიტანისას სლაიდერის გაჩერება
 
   const slidesContainer = document.querySelector("#slides-container");
   slidesContainer.addEventListener("mouseenter", () => {
@@ -116,7 +101,7 @@ const slideFn = () => {
     console.log("slides paused");
   });
 
-  // დავალება 2.3) მაუსის გამოტანისას სლაიდერის გაგრძელება
+  // მაუსის გამოტანისას სლაიდერის გაგრძელება
 
   slidesContainer.addEventListener("mouseleave", () => {
     slideInterval = setInterval(goToNextSlide, 5000);
@@ -127,3 +112,34 @@ const slideFn = () => {
 };
 
 slideFn();
+
+// recommendations section
+
+const recomSlides = [
+  document.getElementById("recomSlide1"),
+  document.getElementById("recomSlide2"),
+  document.getElementById("recomSlide3"),
+];
+const cubes = document.querySelectorAll(".cube");
+let currentRecomSlide = 0;
+
+function showRecomSlide(index) {
+  recomSlides.forEach((recomSlide) => recomSlide.classList.remove("active"));
+  cubes.forEach((cube) => cube.classList.remove("active-cube"));
+  recomSlides[index].classList.add("active");
+  cubes[index].classList.add("active-cube");
+}
+cubes.forEach((cube, index) => {
+  cube.addEventListener("click", () => {
+    currentRecomSlide = index;
+    showRecomSlide(currentRecomSlide);
+  });
+});
+showRecomSlide(currentRecomSlide);
+// function setIntervalRecom() {
+//   setInterval(() => {
+//     currentRecomSlide = (currentRecomSlide + 1) % recomSlides.length;
+//     showRecomSlide(currentRecomSlide);
+//   }, 1000);
+// }
+// setIntervalRecom();
