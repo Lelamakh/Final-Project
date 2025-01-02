@@ -139,22 +139,78 @@ showRecomSlide(currentRecomSlide);
 
 // latest projects section
 
-function showProjectDetails(cardNumber) {
-  const cards = document.querySelectorAll("card");
-  if (cardNumber === "all") {
-    projectcards.forEach((card) => {
-      card.style.display = "block";
-      card.classList.remove("active");
+// function showProjectDetails(cardNumber) {
+//   const cards = document.querySelectorAll("card");
+//   if (cardNumber === "all") {
+//     projectcards.forEach((card) => {
+//       card.style.display = "block";
+//       card.classList.remove("active");
+//     });
+//   } else {
+//     projectcards.forEach((card) => {
+//       card.style.display = "none";
+//     });
+//     const selectedCard = document.getElementById(`card${cardNumber}`);
+//     selectedCard.style.display = "block";
+//     selectedCard.classList.add(active);
+//   }
+// }
+// document.addEventListener("DOMContentLoaded", () => {
+//   showProjectDetails("all");
+// });
+
+// Function to reset all cards to initial state
+
+function showProjectDetails(selectedCard) {
+  // Get all project cards and the navbar links
+  const projectCards = document.querySelectorAll(".projectcard");
+  const navbarLinks = document.querySelectorAll(".navbar a");
+
+  // Reset all cards to default state (unblurred, visible, and no info shown)
+  projectCards.forEach((card) => {
+    card.classList.remove("show-info", "blurred", "hidden");
+  });
+
+  // Reset all navbar links to default state (remove active class)
+  navbarLinks.forEach((link) => {
+    link.classList.remove("active");
+  });
+
+  // Handle 'All' option: show all cards without blurring
+  if (selectedCard === "all") {
+    projectCards.forEach((card) => {
+      card.classList.remove("hidden"); // Make all cards visible
+      card.classList.remove("blurred"); // Remove blur from all cards
+      card.classList.remove("show-info"); // Hide any info if 'All' is selected
     });
   } else {
-    projectcards.forEach((card) => {
-      card.style.display = "none";
+    // For other selections, only show the selected card and hide/blurr the others
+    projectCards.forEach((card) => {
+      if (card.id === selectedCard) {
+        card.classList.add("show-info"); // Show info on the selected card
+        card.classList.add("blurred"); // Apply blur effect on the card's background image
+      } else {
+        card.classList.add("hidden"); // Hide non-selected cards
+      }
     });
-    const selectedCard = document.getElementById(`card${cardNumber}`);
-    selectedCard.style.display = "block";
-    selectedCard.classList.add(active);
   }
+
+  // Add 'active' class to the clicked navbar link
+  navbarLinks.forEach((link) => {
+    if (
+      link.textContent.toLowerCase() ===
+      selectedCard.replace("card-", "").replace("-", " ")
+    ) {
+      link.classList.add("active");
+    }
+  });
 }
-document.addEventListener("DOMContentLoaded", () => {
-  showProjectDetails("all");
+
+// Event listeners for navbar links
+document.querySelectorAll(".navbar a").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent the default link action
+    const selectedCard = link.getAttribute("onclick").split("'")[1]; // Extract the card ID
+    showProjectDetails(selectedCard);
+  });
 });
