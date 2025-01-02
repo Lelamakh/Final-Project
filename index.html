@@ -64,15 +64,12 @@
           <div id="slides-container" class="slides-container">
             <div class="slide">
               <img src="assets/images/slider1.jpg" alt="1.jpg" />
-              <h2>slide 1</h2>
             </div>
             <div class="slide">
               <img src="assets/images/slider1.jpg" alt="2.jpg" />
-              <h2>slide 2</h2>
             </div>
             <div class="slide">
               <img src="assets/images/slider1.jpg" alt="3.jpg" />
-              <h2>slide 3</h2>
             </div>
           </div>
         </div>
@@ -177,9 +174,9 @@
             <div class="photo-and-info">
               <img src="assets/images/Bill.jpg" alt="Bill" />
               <div class="info">
-                <span>"</span>
+                <div class="quote">"</div>
                 <p class="recom-proffesion">software architect</p>
-                <p class="recom-name">bill Gates</p>
+                <p class="recom-name">Bill Gates</p>
               </div>
             </div>
           </div>
@@ -193,7 +190,7 @@
             <div class="photo-and-info">
               <img src="assets/images/safra.jpg" alt="safra" />
               <div class="info">
-                <span>"</span>
+                <div class="quote">"</div>
                 <p class="recom-proffesion">Technology Executive</p>
                 <p class="recom-name">Safra Catz</p>
               </div>
@@ -209,7 +206,8 @@
             <div class="photo-and-info">
               <img src="assets/images/Mark.jpg" alt="Mark" />
               <div class="info">
-                <span>"</span>
+                <div class="quote">"</div>
+
                 <p class="recom-proffesion">chief executive officer</p>
                 <p class="recom-name">Mark Zuckenberg</p>
               </div>
@@ -220,6 +218,95 @@
           <div class="cube" onclick="changeSlide(0)"></div>
           <div class="cube" onclick="changeSlide(1)"></div>
           <div class="cube" onclick="changeSlide(2)"></div>
+        </div>
+      </section>
+      <section class="latest-projects">
+        <h1 class="header">Latest Projects</h1>
+        <div class="projects-wrapper">
+          <div class="navbar">
+            <ul>
+              <li>
+                <a href="#" onclick="showProjectDetails('card-1')"
+                  >Work Ideas</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="showProjectDetails('card-2')">Mockup</a>
+              </li>
+              <li>
+                <a href="#" onclick="showProjectDetails('card-3')"
+                  >PSD Design</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="showProjectDetails('card-4')">Logo</a>
+              </li>
+              <li>
+                <a href="#" onclick="showProjectDetails('card-5')"
+                  >Presentation</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="showProjectDetails('card-6')">Icon</a>
+              </li>
+
+              <li onclick="showProjectDetails(2)">Mockup</li>
+              <li onclick="showProjectDetails(3)">PSD Design</li>
+              <li onclick="showProjectDetails(4)">Logo</li>
+              <li onclick="showProjectDetails(5)">Presentation</li>
+              <li onclick="showProjectDetails(6)">Icons</li>
+            </ul>
+          </div>
+
+          <div class="projectcards">
+            <div class="card" id="card1">
+              <img src="assets/images/li1.webp" alt="" />
+              <div class="project-info">
+                <p class="project-text1">9 MONTS AGO</p>
+                <p class="project-text2">Work Ideas</p>
+              </div>
+            </div>
+            <div class="card" id="card2">
+              <img src="assets/images/li3.jpg" alt="" />
+              <div class="project-info" id="project-info1">
+                <img src="assets/images/heart.svg" alt="" />
+                <p class="project-text1">9 MONTS AGO</p>
+                <p class="project-text2">Mockup</p>
+              </div>
+            </div>
+            <div class="card" id="card3">
+              <img src="assets/images/li4.jpg" alt="" />
+              <div class="project-info" id="project-info1">
+                <img src="assets/images/heart.svg" alt="" />
+                <p class="project-text1">9 MONTS AGO</p>
+                <p class="project-text2">PSD Design</p>
+              </div>
+            </div>
+            <div class="card" id="card4">
+              <img src="assets/images/li5.png" alt="" />
+              <div class="project-info" id="project-info1">
+                <img src="assets/images/heart.svg" alt="" />
+                <p class="project-text1">9 MONTS AGO</p>
+                <p class="project-text2">Logo</p>
+              </div>
+            </div>
+            <div class="card" id="card5">
+              <img src="assets/images/li6.png" alt="" />
+              <div class="project-info" id="project-info1">
+                <img src="assets/images/heart.svg" alt="" />
+                <p class="project-text1">9 MONTS AGO</p>
+                <p class="project-text2">Presentations</p>
+              </div>
+            </div>
+            <div class="card" id="card6">
+              <img src="assets/images/li7.avif" alt="" />
+              <div class="project-info" id="project-info1">
+                <img src="assets/images/heart.svg" alt="" />
+                <p class="project-text1">9 MONTS AGO</p>
+                <p class="project-text2">Icons</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

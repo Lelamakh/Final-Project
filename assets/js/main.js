@@ -136,10 +136,25 @@ cubes.forEach((cube, index) => {
   });
 });
 showRecomSlide(currentRecomSlide);
-// function setIntervalRecom() {
-//   setInterval(() => {
-//     currentRecomSlide = (currentRecomSlide + 1) % recomSlides.length;
-//     showRecomSlide(currentRecomSlide);
-//   }, 1000);
-// }
-// setIntervalRecom();
+
+// latest projects section
+
+function showProjectDetails(cardNumber) {
+  const cards = document.querySelectorAll("card");
+  if (cardNumber === "all") {
+    projectcards.forEach((card) => {
+      card.style.display = "block";
+      card.classList.remove("active");
+    });
+  } else {
+    projectcards.forEach((card) => {
+      card.style.display = "none";
+    });
+    const selectedCard = document.getElementById(`card${cardNumber}`);
+    selectedCard.style.display = "block";
+    selectedCard.classList.add(active);
+  }
+}
+document.addEventListener("DOMContentLoaded", () => {
+  showProjectDetails("all");
+});
