@@ -113,6 +113,40 @@ const slideFn = () => {
 
 slideFn();
 
+// second section
+
+// Function to fill skills based on their percentage
+function fillSkills() {
+  const skills = document.querySelectorAll(".skill-percentage");
+  skills.forEach((skill) => {
+    const percentage = skill.getAttribute("data-percentage"); // Get percentage from data attribute
+    skill.style.width = percentage + "%"; // Fill the bar according to percentage
+  });
+}
+
+// Function to check if the skills section is in view
+function isInView(element) {
+  const rect = element.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  // Check if the element is in the viewport
+  return rect.top <= windowHeight && rect.bottom >= 0;
+}
+
+// Function to handle scroll event and trigger skill filling
+function onScroll() {
+  const skillsSection = document.querySelector(".skills-container"); // Select the container
+
+  // If the skills section is in view, fill the skills
+  if (isInView(skillsSection)) {
+    fillSkills(); // Trigger the skill filling
+    window.removeEventListener("scroll", onScroll); // Remove the scroll listener after filling
+  }
+}
+
+// Add scroll event listener
+window.addEventListener("scroll", onScroll);
+
 // recommendations section
 
 const recomSlides = [
@@ -138,28 +172,6 @@ cubes.forEach((cube, index) => {
 showRecomSlide(currentRecomSlide);
 
 // latest projects section
-
-// function showProjectDetails(cardNumber) {
-//   const cards = document.querySelectorAll("card");
-//   if (cardNumber === "all") {
-//     projectcards.forEach((card) => {
-//       card.style.display = "block";
-//       card.classList.remove("active");
-//     });
-//   } else {
-//     projectcards.forEach((card) => {
-//       card.style.display = "none";
-//     });
-//     const selectedCard = document.getElementById(`card${cardNumber}`);
-//     selectedCard.style.display = "block";
-//     selectedCard.classList.add(active);
-//   }
-// }
-// document.addEventListener("DOMContentLoaded", () => {
-//   showProjectDetails("all");
-// });
-
-// Function to reset all cards to initial state
 
 function showProjectDetails(selectedCard) {
   // Get all project cards and the navbar links
