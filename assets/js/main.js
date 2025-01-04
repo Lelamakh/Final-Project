@@ -115,37 +115,39 @@ slideFn();
 
 // second section
 
-// Function to fill skills based on their percentage
-function fillSkills() {
-  const skills = document.querySelectorAll(".skill-percentage");
+// Select all skill elements
+const skills = document.querySelectorAll(".skill");
+
+// Function to check if the skill bars are in the viewport
+function checkSkillBars() {
+  const windowHeight = window.innerHeight;
+
   skills.forEach((skill) => {
-    const percentage = skill.getAttribute("data-percentage"); // Get percentage from data attribute
-    skill.style.width = percentage + "%"; // Fill the bar according to percentage
+    const skillBar = skill.querySelector(".skill-bar");
+    const skillPercentage = skill.querySelector(".skill-percentage");
+    const skillPosition = skillBar.getBoundingClientRect().top;
+
+    // Check if the skill bar is visible in the viewport
+    if (
+      skillPosition < windowHeight - 100 &&
+      skillPosition > -skillBar.offsetHeight
+    ) {
+      // Get the percentage from the data attribute
+      const percentage = skillPercentage.getAttribute("data-percentage");
+
+      // If the width is not already set, animate it
+      if (skillPercentage.style.width === "0px") {
+        skillPercentage.style.width = `${percentage}%`;
+      }
+    }
   });
 }
 
-// Function to check if the skills section is in view
-function isInView(element) {
-  const rect = element.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
+// Add scroll event listener to trigger the animation when the user scrolls
+window.addEventListener("scroll", checkSkillBars);
 
-  // Check if the element is in the viewport
-  return rect.top <= windowHeight && rect.bottom >= 0;
-}
-
-// Function to handle scroll event and trigger skill filling
-function onScroll() {
-  const skillsSection = document.querySelector(".skills-container"); // Select the container
-
-  // If the skills section is in view, fill the skills
-  if (isInView(skillsSection)) {
-    fillSkills(); // Trigger the skill filling
-    window.removeEventListener("scroll", onScroll); // Remove the scroll listener after filling
-  }
-}
-
-// Add scroll event listener
-window.addEventListener("scroll", onScroll);
+// Initial check when the page loads, in case the skill bars are already in view
+checkSkillBars();
 
 // recommendations section
 
