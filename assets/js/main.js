@@ -115,40 +115,6 @@ slideFn();
 
 // second section
 
-// Select all skill elements
-const skills = document.querySelectorAll(".skill");
-
-// Function to check if the skill bars are in the viewport
-function checkSkillBars() {
-  const windowHeight = window.innerHeight;
-
-  skills.forEach((skill) => {
-    const skillBar = skill.querySelector(".skill-bar");
-    const skillPercentage = skill.querySelector(".skill-percentage");
-    const skillPosition = skillBar.getBoundingClientRect().top;
-
-    // Check if the skill bar is visible in the viewport
-    if (
-      skillPosition < windowHeight - 100 &&
-      skillPosition > -skillBar.offsetHeight
-    ) {
-      // Get the percentage from the data attribute
-      const percentage = skillPercentage.getAttribute("data-percentage");
-
-      // If the width is not already set, animate it
-      if (skillPercentage.style.width === "0px") {
-        skillPercentage.style.width = `${percentage}%`;
-      }
-    }
-  });
-}
-
-// Add scroll event listener to trigger the animation when the user scrolls
-window.addEventListener("scroll", checkSkillBars);
-
-// Initial check when the page loads, in case the skill bars are already in view
-checkSkillBars();
-
 // recommendations section
 
 const recomSlides = [

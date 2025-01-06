@@ -19,7 +19,7 @@ a:visited {
 .container {
   width: 100%;
   max-width: 1920 px;
-  height: 960px;
+  height: auto;
   margin: 0 auto;
   padding: 10px 10px 0px 10px;
 }
@@ -30,6 +30,8 @@ img {
 .slides-section {
   position: relative;
   width: 100%;
+  /* max-width: 1920px; */
+  height: auto;
   overflow: hidden;
 }
 .content-wrapper {
@@ -91,7 +93,7 @@ img {
   /* background-color: white; */
   display: block;
   margin-top: 384px;
-  margin-left: 1023px;
+  margin-left: 858px;
   margin-right: 292px;
   font-size: 49.7px;
   /* height: 292px; */
@@ -132,12 +134,11 @@ img {
   margin-top: 25px;
   margin-right: 60px;
   left: 1631px;
-  text-align: left;
+  text-align: right;
   letter-spacing: 4.75px;
   color: #1c1c1c;
   opacity: 1;
   flex: 1;
-  text-align: right;
   font-size: 20px;
 }
 .right-corner {
@@ -148,7 +149,7 @@ img {
   z-index: 1;
   top: 25px;
   right: 112px;
-  text-align: left;
+  text-align: right;
   letter-spacing: 4.75px;
   width: 170px;
   height: 221px;
@@ -158,7 +159,7 @@ img {
   z-index: 2;
   top: 106px;
   right: 64px;
-  font-size: 43px;
+  font-size: 48px;
   font-weight: bold;
   width: 237px;
   height: 60px;
@@ -169,14 +170,18 @@ img {
 }
 .overlay {
   position: relative;
-  width: 227px;
-  height: 200px;
+  width: 100%;
+  max-width: 227px;
+  height: auto;
+  flex-wrap: wrap;
 }
 
 .bottom {
   display: block;
-  margin-top: 628px;
+  margin-top: 891px;
   width: 361px;
+  margin-left: -300px;
+  text-align: left;
 }
 .red-colour {
   font-size: 24px;
@@ -186,6 +191,7 @@ img {
   color: #e93656;
   text-align: left;
   letter-spacing: 0px;
+  /* margin-right: 112px; */
 }
 .black-colour {
   font-size: 24px;
@@ -238,7 +244,7 @@ img {
 .wrapper {
   display: flex;
   margin-top: 135px;
-  /* align-items: center; */
+  align-items: center;
   justify-content: center;
 }
 
@@ -246,7 +252,7 @@ img {
   text-align: right;
 }
 .left-side h1 {
-  text-align: center;
+  text-align: right;
   letter-spacing: 0px;
   color: #222222;
   font-size: 40px;
@@ -260,8 +266,9 @@ img {
   opacity: 1;
 }
 .left-side p {
-  width: 334px;
-  height: 149px;
+  width: 100%;
+  max-width: 334px;
+  height: auto;
   text-align: right;
   margin-left: 38px;
   margin-top: 33px;
@@ -273,11 +280,13 @@ img {
 .left-side button {
   background: #e93656 0% 0% no-repeat padding-box;
   opacity: 1;
-  width: 152px;
+  width: 100%;
+  max-width: 152px;
   height: 50px;
   border-style: none;
   color: white;
   cursor: pointer;
+  margin-top: 60px;
 }
 button:hover {
   background-color: red;
@@ -287,7 +296,7 @@ button:hover {
   display: flex;
   width: 100%;
   max-width: 550px;
-  height: 755px;
+  height: auto;
   margin-left: 65px;
   margin-right: 69px;
 }
@@ -378,9 +387,13 @@ footer {
   cursor: pointer;
 }
 .footer-wrapper img {
+  width: 100%;
+  /* max-width: 30px; */
+  height: auto;
   border: 1px dashed #ffffff;
   border-radius: 50px;
   padding: 30px;
+  /* object-fit: cover; */
 }
 .footer-wrapper img:hover {
   background-color: #e93656;
@@ -704,6 +717,7 @@ article:hover span {
 .latest-articles {
   display: flex;
   margin-top: 180px;
+  margin-bottom: 269px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -760,4 +774,12 @@ article:hover span {
   line-height: 30px;
   color: rgb(11, 9, 9);
   width: 569px;
+}
+/* rosa team 
+ */
+
+.partner img {
+  width: 300px;
+  height: 110px;
+  background-color: yellow;
 }
