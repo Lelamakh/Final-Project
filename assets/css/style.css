@@ -25,6 +25,7 @@ a:visited {
 }
 img {
   width: 100%;
+  /* max-width: 1920px ; */
   object-fit: cover;
 }
 .slides-section {
@@ -53,6 +54,7 @@ img {
 
 .content-wrapper {
   width: 100%;
+  /* max-width: 1920px; */
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -82,25 +84,27 @@ img {
 .resume {
   font-size: 13px;
   display: block;
-  top: 95px;
-  left: 52px;
+  /* top: 65px; */
+  /* left: 52px; */
   width: 119px;
   height: 16px;
   text-align: left;
   letter-spacing: 0px;
   color: #b3b3b3;
   opacity: 1;
+  font-family: Montserrat-Regular;
 }
 .middle-content {
   flex: 1;
-  width: 582px;
+  width: 100%;
+  max-width: 582px;
   /* background-color: white; */
   display: block;
   margin-top: 384px;
-  margin-left: 858px;
+  /* margin-left: 858px; */
   margin-right: 292px;
   font-size: 49.7px;
-  /* height: 292px; */
+  height: 292px;
   text-align: left;
   letter-spacing: 0.75px;
   color: #212121;
@@ -135,14 +139,14 @@ img {
 }
 
 .content-right {
-  margin-top: 25px;
-  margin-right: 60px;
-  left: 1631px;
+  /* margin-top: 25px; */
+  /* margin-right: 60px; */
+  /* left: 1631px; */
   text-align: right;
   letter-spacing: 4.75px;
   color: #1c1c1c;
   opacity: 1;
-  flex: 1;
+  /* flex: 1; */
   font-size: 20px;
 }
 .right-corner {
@@ -157,6 +161,7 @@ img {
   letter-spacing: 4.75px;
   width: 170px;
   height: 221px;
+  color: rgb(89, 88, 88);
 }
 .about {
   position: absolute;
@@ -182,9 +187,10 @@ img {
 
 .bottom {
   display: block;
-  margin-top: 891px;
+  margin-top: 910px;
   width: 361px;
   margin-left: -300px;
+  margin-right: 50px;
   text-align: left;
 }
 .red-colour {
@@ -292,7 +298,7 @@ img {
   cursor: pointer;
   margin-top: 60px;
 }
-left-side button:hover {
+.left-side button:hover {
   background-color: red;
   font-size: medium;
 }
@@ -392,12 +398,12 @@ footer {
 }
 .footer-wrapper img {
   width: 100%;
-  /* max-width: 30px; */
+  /* max-width: 20px; */
   height: auto;
   border: 1px dashed #ffffff;
   border-radius: 50px;
   padding: 30px;
-  /* object-fit: cover; */
+  object-fit: cover;
 }
 .footer-wrapper img:hover {
   background-color: #e93656;
@@ -412,7 +418,7 @@ footer {
 .section-third {
   display: flex;
   justify-content: center;
-  margin-top: 203px;
+  /* margin-top: 203px; */
 }
 .cards {
   display: flex;
@@ -439,11 +445,13 @@ article {
   position: relative;
   overflow: hidden;
 }
-.card-content {
+/* .card-content {
   position: absolute;
-}
+} */
 .card-content img {
   display: block;
+  width: 100%;
+  max-width: 70px;
 }
 .additional-infor {
   display: none;
@@ -491,6 +499,10 @@ article:hover span {
 /* recomendations  */
 .recom-slider-container {
   background-color: #131a36;
+  background-image: url("/assets/images/clip.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -527,7 +539,7 @@ article:hover span {
 .photo-and-info img {
   width: 140px;
   height: 140px;
-  background: black 0% 0% no-repeat padding-box;
+  /* background: blue 0% 0% no-repeat padding-box; */
   opacity: 1;
   border-radius: 50%;
   border: 1px dashed #ffffff;
@@ -785,6 +797,7 @@ article:hover span {
 .rosa-team {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   width: 100%;
   max-width: 1170px;
@@ -892,6 +905,7 @@ article:hover span {
   display: flex;
   justify-content: center;
   gap: 10px;
+  width: 100%;
 }
 .contact-section h2,
 .contact-section p,
@@ -992,6 +1006,8 @@ textarea {
 .roca-logos {
   margin-bottom: 57px;
   margin-top: 45px;
+  display: flex;
+  gap: 20px;
 }
 .rights {
   display: flex;
