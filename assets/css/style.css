@@ -65,7 +65,7 @@ img {
   margin-left: 52px;
   width: 113px;
 }
-.roca {
+.rocaa {
   width: 113px;
   height: 56px;
   text-align: left;
@@ -73,6 +73,10 @@ img {
   color: #1a1a1a;
   font-size: 40px;
   font-weight: bold;
+  display: flex;
+}
+.blue {
+  color: #0081ff;
 }
 
 .resume {
@@ -288,7 +292,7 @@ img {
   cursor: pointer;
   margin-top: 60px;
 }
-button:hover {
+left-side button:hover {
   background-color: red;
   font-size: medium;
 }
@@ -852,4 +856,151 @@ article:hover span {
   color: #626262;
   line-height: 24px;
   margin-top: 16px;
+}
+
+/* CONTACT-SECTION */
+
+.contact-section {
+  position: relative;
+  width: 100%;
+  /* max-width: 1920px; */
+  height: 660px;
+  background-image: url("/assets/images/map.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+}
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* filter: blur(5px); */
+  opacity: 71%;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 2);
+}
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 46px;
+}
+.firstcont {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.contact-section h2,
+.contact-section p,
+.contact-section form {
+  position: relative;
+  z-index: 1;
+}
+
+input {
+  padding: 18px 195px 17px 30px;
+  font-size: 10px;
+  letter-spacing: 0.4px;
+  color: #515151;
+  font-family: Poppins-SemiBold;
+}
+.secondcont {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+textarea {
+  padding: 22px 870px 73px 30px;
+  color: #515151;
+  letter-spacing: 0.4px;
+  font-size: 10px;
+  font-family: Poppins-SemiBold;
+}
+.button2 {
+  display: flex;
+  margin: 0 auto;
+  background: #daaf1b00 0% 0% no-repeat padding-box;
+  border: 2px solid #e93656;
+  opacity: 1;
+  padding: 16px 41px 18px 41px;
+  color: #e93656;
+  /* font-weight: bold; */
+  font-size: 12px;
+  letter-spacing: 0.96px;
+  width: 100%;
+  max-width: 200px;
+  font-family: GlacialIndifference-Bold;
+  position: relative;
+  z-index: 1;
+  opacity: 100%;
+}
+.contuct-us {
+  margin-top: 155px;
+  font-size: 45px;
+  letter-spacing: 1.35px;
+  padding: 152px 0 0 0;
+}
+.contact-section p {
+  margin-top: 12px;
+}
+
+/* ROCA  */
+
+.roca {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  background-color: #282828;
+  color: white;
+}
+.roca-header {
+  display: flex;
+}
+.roca h1 {
+  margin-top: 111px;
+  font-size: 55.42px;
+  letter-spacing: 1.66px;
+  font-family: Poppins-ExtraBold;
+}
+.reddot {
+  color: red;
+}
+.roca p {
+  font-size: 17px;
+  width: 100%;
+  max-width: 613px;
+  margin-top: 23px;
+  color: #a5a5a5;
+  line-height: 27px;
+  font-family: Poppins-ExtraBold;
+}
+.roca-logo {
+  max-width: 20px;
+  width: 100%;
+  height: 20px;
+  /* fill: red; */
+  /* background-color: red; */
+}
+.roca-logos {
+  margin-bottom: 57px;
+  margin-top: 45px;
+}
+.rights {
+  display: flex;
+  background-color: #171717;
+  color: #a0a8b7;
+  justify-content: center;
+  /* margin: 0 auto; */
+  padding: 27px 0 36px 0;
+}
+.rights a {
+  color: white;
 }
