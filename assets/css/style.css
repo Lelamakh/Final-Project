@@ -9,7 +9,7 @@ a {
 a:hover {
   font-weight: bold;
   color: #4c6456;
-  text-decoration: underline;
+  /* text-decoration: ; */
 }
 a:visited {
   color: #212121;
@@ -745,6 +745,7 @@ article:hover span {
 }
 .latest-articles {
   display: flex;
+  /* gap: 0;   - არ მუშაობს ??????????? */
   margin-top: 79px;
   margin-bottom: 269px;
   flex-direction: column;
@@ -753,7 +754,6 @@ article:hover span {
   width: 100%;
 }
 .article-wrapper {
-  gap: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -782,6 +782,9 @@ article:hover span {
   max-width: 827px;
   height: 590px;
   object-fit: cover;
+}
+.picture img:hover {
+  opacity: 0.7;
 }
 .dates {
   width: 123px;
