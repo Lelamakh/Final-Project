@@ -632,7 +632,7 @@
         <p>Please, fill out the form bellow</p>
         <form
           id="contact-form"
-          action="https://borjomi.loremipsum.ge/api/send-message"
+          action="https://jsonplaceholder.typicode.com/posts"
           method="POST"
         >
           <div class="firstcont">
@@ -643,12 +643,7 @@
               placeholder="Email Address"
               required
             />
-            <input
-              type="url"
-              name="website"
-              placeholder="Your Website"
-              required
-            />
+            <input type="url" name="website" placeholder="Your Website" />
           </div>
           <div class="secondcont">
             <textarea name="message" placeholder="Message" required></textarea>
@@ -656,7 +651,14 @@
           <button class="button2" type="submit">SEND MESSAGE</button>
         </form>
       </section>
-
+      <div id="thank-you-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <p>
+            Thank you for getting in touch! We appreciate you contacting us.
+          </p>
+        </div>
+      </div>
       <section class="roca">
         <div class="roca-header">
           <h1>Roca</h1>

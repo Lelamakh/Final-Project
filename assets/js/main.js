@@ -194,3 +194,37 @@ document.querySelectorAll(".navbar a").forEach((link) => {
     showProjectDetails(selectedCard);
   });
 });
+
+// contactsection
+
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form from submitting the default way
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    // Send the form data using fetch
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => {
+        console.log("Response:", response); // Log the response object
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Data:", data); // Log the JSON response from the server
+        // Check if the response indicates success
+        if (data.status === 1) {
+          showModal();
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error); // Log the error if there is one
+        alert("There was an error submitting the form.");
+      });
+  });
