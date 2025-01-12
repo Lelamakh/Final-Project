@@ -115,29 +115,28 @@ slideFn();
 
 // second section
 
-// recommendations section
+window.addEventListener("scroll", function () {
+  const skillBars = document.querySelectorAll(".skill-percentage");
 
-const recomSlides = [
-  document.getElementById("recomSlide1"),
-  document.getElementById("recomSlide2"),
-  document.getElementById("recomSlide3"),
-];
-const cubes = document.querySelectorAll(".cube");
-let currentRecomSlide = 0;
+  skillBars.forEach(function (bar) {
+    // Get the percentage value from the data-percentage attribute
+    const percentage = bar.getAttribute("data-percentage");
 
-function showRecomSlide(index) {
-  recomSlides.forEach((recomSlide) => recomSlide.classList.remove("active"));
-  cubes.forEach((cube) => cube.classList.remove("active-cube"));
-  recomSlides[index].classList.add("active");
-  cubes[index].classList.add("active-cube");
-}
-cubes.forEach((cube, index) => {
-  cube.addEventListener("click", () => {
-    currentRecomSlide = index;
-    showRecomSlide(currentRecomSlide);
+    // Get the position of the skill bar relative to the viewport
+    const barPosition = bar.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    // Log for debugging: Check the positions
+    console.log("Bar Position:", barPosition, "Window Height:", windowHeight);
+
+    // Check if the bar is within the viewport (scrollable area)
+    if (barPosition < windowHeight) {
+      console.log("Skill bar is in view, animating...");
+      // Animate the skill bar width based on its data-percentage value
+      bar.style.width = percentage + "%";
+    }
   });
 });
-showRecomSlide(currentRecomSlide);
 
 // latest projects section
 
@@ -195,36 +194,36 @@ document.querySelectorAll(".navbar a").forEach((link) => {
   });
 });
 
-// contactsection
+// contact-section
 
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form from submitting the default way
+// document
+//   .getElementById("contact-form")
+//   .addEventListener("submit", function (event) {
+//     event.preventDefault(); // Prevent form from submitting the default way
 
-    const form = event.target;
-    const formData = new FormData(form);
+//     const form = event.target;
+//     const formData = new FormData(form);
 
-    // Send the form data using fetch
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => {
-        console.log("Response:", response); // Log the response object
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Data:", data); // Log the JSON response from the server
-        // Check if the response indicates success
-        if (data.status === 1) {
-          showModal();
-        } else {
-          alert("Something went wrong. Please try again.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error:", error); // Log the error if there is one
-        alert("There was an error submitting the form.");
-      });
-  });
+//     // Send the form data using fetch
+//     fetch(form.action, {
+//       method: "POST",
+//       body: formData,
+//     })
+//       .then((response) => {
+//         console.log("Response:", response); // Log the response object
+//         return response.json();
+//       })
+//       .then((data) => {
+//         console.log("Data:", data); // Log the JSON response from the server
+//         // Check if the response indicates success
+//         if (data.status === 1) {
+//           showModal();
+//         } else {
+//           alert("Something went wrong. Please try again.");
+//         }
+//       })
+//       .catch((error) => {
+//         console.error("Error:", error); // Log the error if there is one
+//         alert("There was an error submitting the form.");
+//       });
+//   });

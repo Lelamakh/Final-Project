@@ -81,6 +81,8 @@ img {
   letter-spacing: 1.2px;
   color: #1a1a1a;
   font-size: 40px;
+  font-family: poppins;
+
   font-weight: bold;
   display: flex;
 }
@@ -102,7 +104,7 @@ img {
   letter-spacing: 0px;
   color: #b3b3b3;
   opacity: 1;
-  font-family: Montserrat-Regular;
+  font-family: montserrat;
 }
 .middle-content {
   flex: 1;
@@ -118,7 +120,7 @@ img {
   text-align: left;
   letter-spacing: 0.75px;
   color: #212121;
-  font-family: "Poppins", sans-serif;
+  font-family: GlacialIndifference-Bold;
   font-weight: 400;
   font-style: normal;
 }
@@ -158,6 +160,7 @@ img {
   opacity: 1;
   /* flex: 1; */
   font-size: 20px;
+  font-family: Poppins-ExtraBold;
 }
 .right-corner {
   font-size: 158px;
@@ -180,6 +183,7 @@ img {
   right: 64px;
   font-size: 48px;
   font-weight: bold;
+  font-family: Poppins-ExtraBold;
   width: 237px;
   height: 60px;
   text-align: left;
@@ -205,7 +209,7 @@ img {
 }
 .red-colour {
   font-size: 24px;
-  font-family: "Poppins", sans-serif;
+  font-family: Montserrat-Bold;
   font-weight: bold;
   font-style: normal;
   color: #e93656;
@@ -215,7 +219,7 @@ img {
 }
 .black-colour {
   font-size: 24px;
-  font-family: "Poppins", sans-serif;
+  font-family: Montserrat-Bold;
   font-weight: bold;
   font-style: normal;
   color: #212121;
@@ -276,10 +280,12 @@ img {
   letter-spacing: 0px;
   color: #222222;
   font-size: 40px;
+  font-family: GlacialIndifference-Bold;
   margin-top: 83px;
 }
 .developer {
   font-size: 14px;
+  font-family: Muli;
   text-align: center;
   letter-spacing: 0px;
   color: #daae19;
@@ -296,6 +302,8 @@ img {
   letter-spacing: 0.45px;
   color: #555555;
   opacity: 1;
+  font-size: 15px;
+  font-family: Muli-Regular;
 }
 .left-side button {
   background: #e93656 0% 0% no-repeat padding-box;
@@ -307,6 +315,7 @@ img {
   color: white;
   cursor: pointer;
   margin-top: 60px;
+  font-family: GlacialIndifference-Bold;
 }
 .left-side button:hover {
   background-color: red;
@@ -328,6 +337,7 @@ img {
 
 .skill p {
   font-size: 20px;
+  font-family: GlacialIndifference-Bold;
 }
 
 .skill-bar {
@@ -340,11 +350,12 @@ img {
   position: relative;
   overflow: hidden;
 }
+
 .skill-percentage {
+  width: 0%; /* Start with 0% width */
   height: 100%;
-  background-color: red;
-  transition: width 2s ease-out;
-  width: 0;
+  background-color: red; /* The color of the filled portion */
+  transition: width 2s ease-out; /* Smooth transition for width change */
   border-radius: 10px;
 }
 .pages {
@@ -375,6 +386,9 @@ img {
 .checkbox:hover {
   background: #15263e;
 }
+
+/* footer   */
+
 footer {
   display: flex;
   background-color: #131a36;
@@ -394,6 +408,7 @@ footer {
   color: #ffffff;
   opacity: 1;
   font-size: 25px;
+  font-family: GlacialIndifference-Bold;
   margin-bottom: 15px;
 }
 .footer-body {
@@ -403,6 +418,7 @@ footer {
   color: #dfdfdf;
   opacity: 1;
   font-size: 14px;
+  font-family: Muli;
   line-height: 24px;
   cursor: pointer;
 }
@@ -458,6 +474,10 @@ article {
 /* .card-content {
   position: absolute;
 } */
+article span {
+  font-size: 22px;
+  font-family: GlacialIndifference-Bold;
+}
 .card-content img {
   display: block;
   width: 100%;
@@ -472,6 +492,7 @@ article {
   color: #ffffff;
   opacity: 1;
   font-size: 30px;
+  font-family: GlacialIndifference-Bold;
   margin-bottom: 19px;
 }
 .additional-infor p {
@@ -481,6 +502,7 @@ article {
   color: #ececec;
   opacity: 1;
   font-size: 14px;
+  font-family: Muli-Light;
   line-height: 26px;
 }
 article:hover .additional-infor {
@@ -539,6 +561,7 @@ article:hover span {
   opacity: 1;
   margin-right: 50px;
   font-size: 15px;
+  font-family: Roboto-Light;
   line-height: 30px;
 }
 .photo-and-info {
@@ -565,6 +588,8 @@ article:hover span {
   width: 39px;
   height: 26px;
   font-size: 50px;
+  font-family: GlacialIndifference-Bold;
+
   opacity: 1;
   color: white;
   margin-bottom: 38px;
@@ -614,6 +639,7 @@ article:hover span {
   margin-top: 144px;
   margin-bottom: 55px;
   font-size: 70px;
+  font-family: GlacialIndifference-Bold;
 }
 .latest-projects {
   flex-direction: column;
@@ -645,6 +671,7 @@ article:hover span {
   line-height: 44px;
   text-decoration: none;
   font-size: 20px;
+  font-family: GlacialIndifference-Bold;
 }
 .navbar a.active {
   color: red;
@@ -717,12 +744,15 @@ article:hover span {
   display: none;
 }
 .project-text1 {
-  margin-top: 160px;
+  margin-top: 150px;
   font-size: 11px;
   margin-bottom: 7px;
+  width: 100%;
+  padding: 0 40px 20px 40px;
 }
 .project-text2 {
   font-size: 23px;
+  font-family: GlacialIndifference-Bold;
 }
 
 /* latest article  */
@@ -740,6 +770,7 @@ article:hover span {
   margin-top: 170px;
   margin-bottom: -120px;
   font-size: 13px;
+  font-family: Muli;
   color: green;
   font-weight: bold;
 }
@@ -774,6 +805,7 @@ article:hover span {
   max-width: 800px;
   height: 590px;
   background-color: #fafafa;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
 }
@@ -797,6 +829,7 @@ article:hover span {
 }
 .article h2 {
   font-size: 14px;
+  font-family: Muli;
   color: #888888;
   letter-spacing: 1.12px;
   margin-left: 28px;
@@ -811,13 +844,15 @@ article:hover span {
   color: #e93656;
   text-align: left;
   font-size: 25px;
+  font-family: GlacialIndifference-Bold;
 }
 .para2 {
   text-align: left;
   letter-spacing: 0px;
   color: #161616;
   opacity: 1;
-  font-size: 40px;
+  font-size: 38px;
+  font-family: GlacialIndifference-Bold;
   margin-top: 4.31px;
   margin-left: 28px;
 }
@@ -832,6 +867,7 @@ article:hover span {
   height: 139px;
   margin-top: 28.69px;
   font: 16px;
+  font-family: Muli;
   margin-left: 28px;
 }
 /* rosa team 
@@ -903,12 +939,14 @@ article:hover span {
 
 .client1 {
   font-size: 16px;
+  font-family: Poppins-SemiBold;
   color: #161616;
   font-weight: bold;
 }
 
 .clientp {
   font-size: 13px;
+  font-family: Roboto-Light;
   color: #626262;
   line-height: 24px;
   margin-top: 16px;
@@ -1010,6 +1048,7 @@ textarea {
 .contuct-us {
   margin-top: 155px;
   font-size: 45px;
+  font-family: GlacialIndifference-Bold;
   letter-spacing: 1.35px;
   padding: 152px 0 0 0;
 }
@@ -1086,7 +1125,7 @@ textarea {
   margin-top: 23px;
   color: #a5a5a5;
   line-height: 27px;
-  font-family: Poppins-ExtraBold;
+  font-family: Roboto-Regular;
 }
 .roca-logo {
   max-width: 20px;
