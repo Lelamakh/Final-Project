@@ -486,7 +486,7 @@
       <h1 class="header">Latest Articles</h1>
 
       <section class="latest-articles">
-        <div class="article-wrapper">
+        <div class="entire-article">
           <div class="white-space"></div>
           <div class="article">
             <img src="assets/images/Icon1.svg" class="articlelogo" alt="" />
@@ -507,12 +507,15 @@
           </div>
           <div class="picture">
             <a href="#">
-              <img src="assets/images/designer.webp" alt="" />
+              <img src="assets/images/artphoto1.jpeg" alt="" />
             </a>
           </div>
+        </div>
+
+        <div class="entire-article">
           <div class="picture">
             <a href="#">
-              <img src="assets/images/app.webp" alt="" />
+              <img src="assets/images/artphoto2.jpeg" alt="" />
             </a>
           </div>
           <div class="dates">
@@ -535,6 +538,9 @@
             </p>
           </div>
           <div class="white-space"></div>
+        </div>
+
+        <div class="entire-article">
           <div class="white-space"></div>
 
           <div class="article">
@@ -557,7 +563,7 @@
           </div>
           <div class="picture">
             <a href="#">
-              <img src="assets/images/advisor.jpg" alt="" />
+              <img src="assets/images/artphoto3.jpeg" alt="" />
             </a>
           </div>
         </div>
@@ -648,29 +654,43 @@
           method="POST"
         >
           <div class="firstcont">
-            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              class="contact-width"
+            />
             <input
               type="email"
               name="email"
               placeholder="Email Address"
               required
+              class="contact-width"
             />
-            <input type="url" name="website" placeholder="Your Website" />
+            <input
+              type="url"
+              name="website"
+              placeholder="Your Website"
+              required
+              class="contact-width"
+            />
           </div>
           <div class="secondcont">
             <textarea name="message" placeholder="Message" required></textarea>
           </div>
           <button class="button2" type="submit">SEND MESSAGE</button>
         </form>
-      </section>
-      <div id="thank-you-modal" class="modal">
-        <div class="modal-content">
-          <span class="close-btn">&times;</span>
-          <p>
-            Thank you for getting in touch! We appreciate you contacting us.
-          </p>
+        <div id="thank-you-modal" class="modal">
+          <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p>
+              Thank you for getting in touch! We appreciate you contacting us.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
+
       <section class="roca">
         <div class="roca-header">
           <h1>Roca</h1>

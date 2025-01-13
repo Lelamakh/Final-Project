@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 a {
   text-decoration: none;
@@ -819,24 +819,30 @@ article:hover span {
 }
 .latest-articles {
   display: flex;
-  /* gap: 0;   - არ მუშაობს ??????????? */
   margin-top: 79px;
   margin-bottom: 269px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
 }
-.article-wrapper {
+.entire-article {
+  display: flex;
+  max-width: 1920px;
+  width: 100%;
+}
+/* .article-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  grid-template-columns: repeat (4, 1fr);
+  /* flex-wrap: wrap; */
+/* grid-template-columns: repeat (4, 1fr);
   width: 100%;
-  max-width: 1920px;
-  /* height: 1700px; */
-}
+  max-width: 1920px; */
+/* height: 1700px; */
+
 .white-space {
   width: 100%;
   max-width: 150px;
@@ -852,11 +858,15 @@ article:hover span {
   align-items: center;
   justify-content: center;
 }
-.picture img {
-  width: 100%;
-  max-width: 827px;
+
+.picture {
+  width: 827px;
   height: 590px;
+}
+.picture img {
+  width: 827px;
   object-fit: cover;
+  height: 100%;
 }
 .picture img:hover {
   opacity: 0.7;
@@ -886,7 +896,7 @@ article:hover span {
   letter-spacing: 0.9px;
   color: #e93656;
   text-align: left;
-  font-size: 25px;
+  font-size: 30px;
   font-family: GlacialIndifference-Bold;
 }
 .para2 {
@@ -905,13 +915,14 @@ article:hover span {
   opacity: 1;
   line-height: 30px;
   color: #494949;
-  width: 100%;
-  max-width: 569px;
-  height: 139px;
+  /* width: 100%; */
+  width: 569px;
+  /* height: 139px; */
   margin-top: 28.69px;
   font: 16px;
   font-family: Muli;
   margin-left: 28px;
+  margin-right: 203px;
 }
 /* rosa team 
  */
@@ -1035,6 +1046,7 @@ article:hover span {
 .firstcont {
   display: flex;
   justify-content: center;
+
   gap: 10px;
   /* width: 100%;
   max-width: 890px;
@@ -1043,6 +1055,7 @@ article:hover span {
 .contact-section p {
   margin-bottom: 46px;
 }
+
 .contact-section h2,
 .contact-section p,
 .contact-section form {
@@ -1051,25 +1064,41 @@ article:hover span {
 }
 
 input {
-  padding: 18px 195px 17px 30px;
+  /* padding: 18px 195px 17px 30px; */
   font-size: 10px;
   letter-spacing: 0.4px;
   color: #515151;
   font-family: Poppins-SemiBold;
+  /* margin-left: 30px; */
 }
+.contact-width {
+  width: 287px;
+  height: 50px;
+  padding-left: 30px;
+}
+
 .secondcont {
   margin-top: 20px;
   margin-bottom: 30px;
   /* width: 100%; */
   /* margin: 0 auto; */
+  /* max-width: 890px; */
 }
+.secondcont {
+  font-size: 40px;
+}
+
 textarea {
-  padding: 22px 870px 73px 30px;
+  width: 950px;
+  height: 110px;
   color: #515151;
   letter-spacing: 0.4px;
   font-size: 10px;
   font-family: Poppins-SemiBold;
+  padding-left: 30px;
+  padding-top: 32px;
 }
+
 .button2 {
   display: flex;
   margin: 0 auto;
