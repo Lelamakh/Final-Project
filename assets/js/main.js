@@ -127,7 +127,7 @@ window.onscroll = function () {
   indicator4.classList.add("line-80");
 };
 
-// latest projects section
+// latest projects - section
 
 function showProjectDetails(selectedCard) {
   // Get all project cards and the navbar links
@@ -182,6 +182,28 @@ document.querySelectorAll(".navbar a").forEach((link) => {
     showProjectDetails(selectedCard);
   });
 });
+
+// recommendations section
+const recomSlides = [
+  document.getElementById("recomSlide1"),
+  document.getElementById("recomSlide2"),
+  document.getElementById("recomSlide3"),
+];
+const cubes = document.querySelectorAll(".cube");
+let currentRecomSlide = 0;
+function showRecomSlide(index) {
+  recomSlides.forEach((recomSlide) => recomSlide.classList.remove("active"));
+  cubes.forEach((cube) => cube.classList.remove("active-cube"));
+  recomSlides[index].classList.add("active");
+  cubes[index].classList.add("active-cube");
+}
+cubes.forEach((cube, index) => {
+  cube.addEventListener("click", () => {
+    currentRecomSlide = index;
+    showRecomSlide(currentRecomSlide);
+  });
+});
+showRecomSlide(currentRecomSlide);
 
 // contact-section
 
