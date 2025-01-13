@@ -115,28 +115,17 @@ slideFn();
 
 // second section
 
-window.addEventListener("scroll", function () {
-  const skillBars = document.querySelectorAll(".skill-percentage");
+let indicator1 = document.querySelector(".line1");
+let indicator2 = document.querySelector(".line2");
+let indicator3 = document.querySelector(".line3");
+let indicator4 = document.querySelector(".line4");
 
-  skillBars.forEach(function (bar) {
-    // Get the percentage value from the data-percentage attribute
-    const percentage = bar.getAttribute("data-percentage");
-
-    // Get the position of the skill bar relative to the viewport
-    const barPosition = bar.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-
-    // Log for debugging: Check the positions
-    console.log("Bar Position:", barPosition, "Window Height:", windowHeight);
-
-    // Check if the bar is within the viewport (scrollable area)
-    if (barPosition < windowHeight) {
-      console.log("Skill bar is in view, animating...");
-      // Animate the skill bar width based on its data-percentage value
-      bar.style.width = percentage + "%";
-    }
-  });
-});
+window.onscroll = function () {
+  indicator1.classList.add("line-80");
+  indicator2.classList.add("line-70");
+  indicator3.classList.add("line-90");
+  indicator4.classList.add("line-80");
+};
 
 // latest projects section
 
