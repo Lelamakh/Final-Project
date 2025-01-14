@@ -1309,4 +1309,8 @@ pp */
   .pages {
     display: none;
   }
+  .slide img {
+    width: 1024px;
+    height: auto;
+  }
 }
