@@ -1236,9 +1236,15 @@ pp */
     width: 100%;
     padding: 0 5px;
   }
-
+  .content-wrapper {
+    width: 365;
+    height: 250px;
+  }
   .content-left {
     margin-top: 10px;
+  }
+  .slides-wrapper {
+    height: 280px;
   }
   .rocaa {
     font-size: 25px;
@@ -1251,6 +1257,7 @@ pp */
     width: 100%;
     margin-top: 100px;
     font-size: 20px;
+    height: ;
   }
   .name {
     font-size: 20px;
@@ -1278,6 +1285,7 @@ pp */
     max-width: 375px;
     width: 100%;
     margin: 0 auto;
+    margin-top: -150px;
   }
   .wrapper {
     max-width: 375px;
@@ -1304,6 +1312,8 @@ pp */
   .left-side a {
     margin: 0 auto;
     margin-left: 100px;
+    padding-top: 0;
+    margin-top: 0;
   }
   .developer {
     display: none;
@@ -1315,26 +1325,32 @@ pp */
   }
   .footer-wrapper {
     max-width: 375px;
-    gap: 7px;
+    gap: 17px;
     margin-left: 10px;
     margin-right: 10px;
+    margin: 0 auto;
+    text-align: center;
   }
   .logo-box {
+    display: none;
     padding: 3px;
-    width: 25px;
+    width: 23px;
     height: 24px;
   }
   .logo-box img {
-    width: 15px;
+    width: 14px;
   }
   .footer-box {
     margin: 0;
   }
   .footer-head {
-    font-size: 20px;
+    font-size: 10px;
+    margin-top: 7px;
   }
   .footer-body {
     font-size: 7px;
+    line-height: 10px;
+    padding-bottom: 10px;
   }
   .header {
     font-size: 40px;
