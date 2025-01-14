@@ -1245,7 +1245,7 @@ pp */
   }
   .resume {
     font-size: 10px;
-    margin-top: 0px;
+    margin-top: -20px;
   }
   .middle-content {
     width: 100%;
@@ -1258,7 +1258,7 @@ pp */
     margin-right: 200px;
   }
   .proffesion {
-    font-size: 12px;
+    font-size: 9px;
     margin-top: 20px;
   }
   .logo {
@@ -1475,5 +1475,45 @@ pp */
   }
   .rosa-team {
     gap: 40px;
+  }
+  .contuct-us {
+    font-size: 15px;
+    padding-top: 30px;
+    display: block;
+  }
+  .firstcont {
+    display: block;
+  }
+  .contact-width {
+    height: 35px;
+  }
+
+  textarea {
+    width: 287px;
+    height: 100px;
+    padding-top: 10px;
+  }
+  .button2 {
+    font-size: 10px;
+    margin: 0 auto;
+    width: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .roca h1 {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  .roca p {
+    width: 300px;
+  }
+  .roca-logos {
+    margin-bottom: 20px;
+  }
+  .rights p {
+    font-size: 10px;
+  }
+  .slide {
+    display: none;
   }
 }
