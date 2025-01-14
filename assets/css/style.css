@@ -1272,6 +1272,7 @@ pp */
     height: auto;
   }
   .logos {
+    margin-top: -25px;
     gap: 10px;
   }
   .slide img {
@@ -1533,6 +1534,16 @@ pp */
     font-size: 10px;
   }
   .slide {
+    display: none;
+  }
+  .additio {
+    width: 275px;
+    margin: 0 auto;
+    margin-left: 40px;
+  }
+}
+@media (width >1024px) {
+  .additio {
     display: none;
   }
 }
