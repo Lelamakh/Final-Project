@@ -1230,22 +1230,22 @@ textarea {
 pp
 pp */
 
-@media only screen and (max-width: 1024px) {
+@media (width <1024px) {
   .container {
-    max-width: 1024px;
+    max-width: 375px;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 5px;
   }
 
   .content-left {
-    margin: 10px;
+    margin-top: 10px;
   }
   .rocaa {
     font-size: 25px;
   }
   .resume {
     font-size: 10px;
-    margin-top: -20px;
+    margin-top: 0px;
   }
   .middle-content {
     width: 100%;
@@ -1275,47 +1275,205 @@ pp */
     display: none;
   }
   .second-section {
-    max-width: 1024px;
+    max-width: 375px;
     width: 100%;
     margin: 0 auto;
   }
-  .left-side {
-    margin-left: -460px;
-    max-width: 200px;
-    text-align: right;
-    margin-top: -80px;
+  .wrapper {
+    max-width: 375px;
+    display: 0 auto;
     display: block;
-    justify-content: right;
-  }
-  .left-side p {
-    margin-left: 5px;
-    max-width: 300px;
-  }
-  .left-side h1 {
-    font-size: 25px;
   }
   .middle {
     display: none;
   }
   .right-side {
-    margin-top: 10px;
-    margin-left: 35px;
     max-width: 300px;
-    width: 100%;
+    margin-left: 30px;
+    text-align: center;
   }
-  .skills {
-    width: 150px;
-    gap: 40px;
+  .left-side {
+    max-width: 170px;
   }
-  .skill-bar {
-    width: 100%;
-    max-width: 200px;
-  }
-  .pages {
+  .left-side h1 {
     display: none;
   }
-  .slide img {
-    width: 1024px;
+  .left-side p {
+    display: none;
+  }
+  .left-side a {
+    margin: 0 auto;
+    margin-left: 100px;
+  }
+  .developer {
+    display: none;
+  }
+  .pages {
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+  .footer-wrapper {
+    max-width: 375px;
+    gap: 7px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .logo-box {
+    padding: 3px;
+    width: 25px;
+    height: 24px;
+  }
+  .logo-box img {
+    width: 15px;
+  }
+  .footer-box {
+    margin: 0;
+  }
+  .footer-head {
+    font-size: 20px;
+  }
+  .footer-body {
+    font-size: 7px;
+  }
+  .header {
+    font-size: 40px;
+    margin-top: 70px;
+  }
+  .cards {
+    margin-left: 25px;
+    gap: 20px;
+  }
+  article {
+    max-width: 150px;
+    height: 150px;
+  }
+  .section-third img {
+    width: 40px;
     height: auto;
+    margin: 0 auto;
+  }
+  article span {
+    font-size: 15px;
+  }
+  .additional-infor h1 {
+    font-size: 15px;
+  }
+  .additional-infor p {
+    font-size: 9px;
+    width: 150px;
+    line-height: 10px;
+    margin-top: 5px;
+    margin-right: 50px;
+    margin-left: 10px;
+  }
+  .recom-slider-container {
+    max-width: 375px;
+    margin: 0 auto;
+    margin-top: 70px;
+    height: 400px;
+  }
+  .recom-slider {
+    max-width: 360px;
+    display: flex;
+    /* flex-direction: row; */
+  }
+  .recom-text {
+    width: 100px;
+    line-height: 13px;
+    display: block;
+  }
+  .photo-and-info img {
+    width: 80px;
+    height: auto;
+    margin-left: -20px;
+  }
+  .cubes {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .quote {
+    display: none;
+  }
+  .info {
+    margin-left: -30px;
+  }
+  .info .recom-name {
+    font-size: 15px;
+  }
+  .projects-wrapper {
+    display: block;
+    margin: 0 auto;
+  }
+  .navbar ul {
+    display: flex;
+    /* heiht: auto; */
+    margin-right: 0;
+    width: 100%;
+    gap: 12px;
+  }
+  .navbar {
+    width: 365px;
+    height: auto;
+    padding: 20px 20px 30px 30px;
+  }
+  .navbar a {
+    font-size: 10px;
+    line-height: 8px;
+  }
+  .projectcards {
+    margin-top: 30px;
+  }
+  .projectcard {
+    margin: 0 auto;
+  }
+  .miniheader {
+    display: none;
+  }
+  .latest-articles {
+    margin: 0 auto;
+  }
+  .entire-article {
+    width: 375px;
+    display: block;
+  }
+  .white-space {
+    display: none;
+  }
+  .article {
+    width: 365px;
+    height: auto;
+  }
+  .article h2 {
+    margin-top: -20px;
+  }
+  .articlelogo {
+    width: 40px;
+    height: auto;
+    margin-top: 5px;
+  }
+  .article p {
+    max-width: 350px;
+    font-size: 10px;
+    line-height: 20px;
+    margin-top: 15px;
+    padding-bottom: 30px;
+  }
+  .dates {
+    display: none;
+  }
+  .picture {
+    display: none;
+  }
+  .partner {
+    display: flex;
+    max-width: 100px;
+  }
+  .partner img {
+    width: 80px;
+    height: auto;
+  }
+  .rosa-team {
+    gap: 40px;
   }
 }
