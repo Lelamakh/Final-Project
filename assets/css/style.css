@@ -1248,10 +1248,12 @@ pp */
   }
   .rocaa {
     font-size: 25px;
+    margin-left: -20px;
   }
   .resume {
     font-size: 10px;
     margin-top: -20px;
+    margin-left: -20px;
   }
   .middle-content {
     width: 100%;
