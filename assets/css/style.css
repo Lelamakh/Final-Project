@@ -1234,7 +1234,7 @@ pp */
   .container {
     max-width: 1024px;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 10px;
   }
 
   .content-left {
@@ -1250,15 +1250,15 @@ pp */
   .middle-content {
     width: 100%;
     margin-top: 100px;
-    font-size: 15px;
+    font-size: 20px;
   }
   .name {
-    font-size: 15px;
+    font-size: 20px;
     /* margin-left: 20px; */
     margin-right: 200px;
   }
   .proffesion {
-    font-size: 8px;
+    font-size: 12px;
     margin-top: 20px;
   }
   .logo {
@@ -1271,8 +1271,13 @@ pp */
   .slide img {
     width: 100%;
   }
+  .content-right {
+    display: none;
+  }
   .second-section {
-    margin-top: -80px;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
   }
   .left-side {
     margin-left: -460px;
